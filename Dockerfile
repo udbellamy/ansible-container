@@ -9,4 +9,5 @@ ADD id_rsa /root/.ssh/id_rsa
 RUN chmod 700 /root/.ssh/id_rsa
 RUN apt-get install -y ansible
 RUN echo '[local]\nlocalhost\n' > /etc/ansible/hosts
+# Pour cette dernière instruction il faut avoir mount votre projet ansible dans /infra lors du docker run
 WORKDIR /infra
